@@ -1,0 +1,86 @@
+# Features
+
+* Ajax gateway to back-end data
+* Columns resizable
+* Data sort
+* Add rows
+* Edit rows
+* Delete rows
+* Data validators
+
+
+***
+
+### HTML required:
+```
+<div id="containerdiv" style="border:solid 2px green;width:600px; height:400px;">
+    <div class="ggvgrid" data-source="http://ggvgrid/table_source.php" data-viepage="1" data-viewrows="10"></div>
+</div>
+```
+
+
+***
+
+## BackEnd API (POST):
+
+###INIT
+```
+query:init
+page:<integer>
+rows:<integer>
+```
+
+Response:
+```
+<init>
+    <parameters rows="10" page="1" />
+    <title>Albums</title>
+    <table>
+        <thead><tr>
+            <th valid_format="/REGULAR_EXPRESION/" tip_message="TIP FOR THE FIELD" flags="<FIELD_FLAGS>">COL1</th>
+            <th valid_format="/REGULAR_EXPRESION/" tip_message="TIP FOR THE FIELD" flags="<FIELD_FLAGS>">COL2</th>
+        </tr></thead>
+        <tbody>
+            <tr id="ROW_INDEX"><td>COLUMN1</td><td>COLUMN2</td></tr>
+            <tr id="ROW_INDEX"><td>COLUMN1</td><td>COLUMN2</td></tr>
+        </tbody>
+    </table>
+</init>
+```
+
+
+###SAVE
+```
+query:save
+data[col1]:<VALUE1>
+data[col2]:<VALUE2>
+```
+
+Response:
+```
+<add><tr id="ROW_INDEX"><td>VALUE1</td><td>VALUE2</td></tr></add>
+```
+
+###UPDATE
+```
+query:update
+data_id:ROW_INDEX
+data[col1]:VALUE1
+data[col2]:VALUE2
+```
+
+Response
+```
+<update><tr id="ROW_INDEX"><td>VALUE1</td><td>VALUE2</td></tr></update>
+```
+
+###REMOVE
+```
+query:delete
+data[]:ROW_INDEX1, ROW_INDEX2...
+```
+
+Response:
+```
+<removed items="ROW_INDEX1,ROW_INDEX2,....."/>
+```

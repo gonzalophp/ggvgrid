@@ -1,0 +1,162 @@
+div.ggvgrid{
+    background-color: #696969;
+    display: table;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0.2em;
+    font-size:0.80em;
+    font-family: tahoma;
+}
+
+div.griddata{
+    margin-top: 2px;    
+}
+
+div.griddata div.tbody {
+    overflow: auto;
+}
+
+div.griddata table:hover {
+    cursor:pointer;
+}
+
+div.griddata div.title {
+    padding:0.5em 0.5em 0.55em 0.5em;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+}
+
+div.griddata div.thead {
+    top:-1px;
+    padding-right: 16px;
+    position: relative;
+    background-color:#ABABAB;
+}
+
+div.griddata div.thead table,div.griddata div.tbody table {
+    border-collapse: collapse;
+}
+
+div.griddata div.thead table thead tr th,
+div.griddata div.tbody table tbody tr td{
+    border:1px solid gray;
+}
+
+div.griddata div.thead table thead tr th{
+    color: #0A0A20;
+    border-top: none;
+}
+
+div.griddata div.thead table thead tr th:last-child{
+    border-right: none;
+}
+
+div.griddata div.thead table thead tr th:hover {
+    color:#222222;
+    background-color:#909495;
+}
+
+
+
+div.griddata div.thead table thead tr th div {
+    position:relative;
+}
+
+div.griddata div.thead table thead tr th span.header{
+    padding-right: 22px;
+}
+
+div.griddata div.thead table thead tr th span.ui-icon{
+    right:2px;
+    bottom: 0px;
+    float:right;
+    position:absolute;
+    background-color: #aed0ea;
+}
+
+div.griddata div.thead table thead tr th span.resize{
+    float: right;
+    width:3px;
+    position: absolute;
+    right:-1px;
+    top:-1px;
+}
+
+div.griddata div.thead table thead tr th span.resize:hover{
+    cursor: col-resize;
+    background-color: #444444;
+}
+
+div.griddata div.tbody {
+    margin-top: -20px;
+    overflow-y: scroll;
+}
+
+div.griddata div.tbody table  {
+    width:100%;
+}
+
+div.griddata div.tbody table  thead {
+    /*visibility: hidden;*/
+}
+
+div.griddata div.tbody table tbody {
+    color: #444444;
+    background-color:#ECECEC;
+}
+
+div.griddata div.tbody table tbody tr:hover {
+    background-color:#ffedad;
+}
+
+div.griddata div.tbody table tbody tr.selected {
+    background-color:#ffe45c;
+}
+
+div.griddata div.tbody table tbody tr td:hover {
+    background-color:#ffef8f;
+}
+
+.ui-widget {
+    font-size: 0.9em;
+}
+
+div.gridbuttons{
+    position:relative;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #aaaaaa;
+    padding:0.1em 0.5em 0.1em 0.5em;
+    margin-top: 1px;
+    display:table-row;
+}
+
+div.gridbuttons div.data_manipulation{
+    float:left;
+}
+
+div.gridbuttons span.space {
+    width:2em;
+    float:left;
+}
+
+div.gridbuttons div.paginator {
+    border:solid 1px #888888;
+    border-radius: 5px 5px 5px 5px;
+    float:left;
+    position:relative;
+}
+
+div.gridbuttons div.paginator input {
+    width:2em;
+}
+
+div.gridbuttons div.paginator input,
+div.gridbuttons div.paginator select {
+    font-size:smaller;
+}
+
+div.gridbuttons div.paginator span.ui-icon-seek-prev:hover,
+div.gridbuttons div.paginator span.ui-icon-seek-next:hover,
+div.gridbuttons div.paginator span.ui-icon-seek-start:hover,
+div.gridbuttons div.paginator span.ui-icon-seek-end:hover {
+    cursor: pointer;
+}
